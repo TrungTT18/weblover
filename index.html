@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+
+    <head>
+        
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        #catcute {
+            position: absolute;
+            top: 50px; 
+            left: 50px; 
+        }
+
+        #cat7mau {
+            position: absolute;
+            bottom: 50px; 
+            right: 50px; 
+        }
+
+        #nanni {
+            position: absolute;
+            bottom: 20px; 
+            
+        }
+
+        body {
+              background-image: url(https://scr.vn/wp-content/uploads/2020/07/N%E1%BB%81n-h%E1%BB%93ng-tr%C3%A1i-tim.jpg);
+        }
+
+        h1 {
+            color: rgb(170, 9, 35);
+            display: flex;
+            justify-content: center; /* canh giữa theo chiều ngang */
+            font-family: Cursive;
+            font-size: 60px;
+        }
+
+        .btn-container {
+            display: flex;
+            background-color: rgb(226, 65, 92);
+            padding: 10px;
+            position: absolute;
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+
+        .btn-container button {
+            margin: 5px; 
+        }
+
+        #no {
+            z-index: 10;
+            transition: all 0.3s;
+        }
+            
+        </style>
+    </head>
+    <body>
+        <main>
+            <img id="catcute" class="moew" src="https://github.com/dunghm98/web-for-crush/blob/master/img/cuteCat.jpg?raw=true" alt="<3" width="200" height="200">
+        <h1>Làm người iu anh nhé ?</h1>
+
+        <div id="yes" class="btn-container">
+            <button type="button" id="yes-btn" onclick="showAlert()">Dạ <3</button>
+        </div>
+        <div id="no" class="btn-container">
+            <button type="button" id="no-btn">Khum</button>
+        </div>
+        <img id="cat7mau" src="https://github.com/dunghm98/web-for-crush/blob/master/img/giphy2.gif?raw=true" alt="cat7mau" width="200" height="100">
+        <img id="nanni" src="https://i.pinimg.com/originals/9c/f4/3d/9cf43d842950f337f4e511ef8b72b616.gif" alt="nanni" width="200" height="200">
+    </main>
+        </main>
+
+        <script>
+            const yes = document.getElementById('yes')
+            function showAlert() {
+            alert("Ỏ hạnh phúc <3");
+            }
+
+            const no = document.getElementById('no')
+
+            no.addEventListener('mouseover', () => {
+                const x = Math.floor(Math.random() * (window.innerWidth - 150))
+                const y = Math.floor(Math.random() * (window.innerHeight - 150))
+
+                no.style.left = `${x}px`
+                no.style.top = `${y}px`
+            })
+        </script>
+    </body>
+</html>
